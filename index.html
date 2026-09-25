@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore NYC 311 noise requests across boroughs, weekdays, and hours during September 15–19, 2025.">
+  <title>The city by the hour | NYC 311</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="refinements.css"><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="mark">INTERACTIVE DATA VISUALIZATION</div><div class="edition">A WEEK IN THE CITY <span>·</span> SEP 15–19, 2025</div></header>
+    <div class="opening"><h1>The city by the hour.</h1></div>
+    <section class="explorer" aria-label="Explore NYC 311 requests">
+      <div class="pickers"><div class="borough-picker"><span class="field-title">CHOOSE YOUR VIEW</span><div id="boroughs" class="borough-list" role="group" aria-label="Choose a borough"></div></div><div class="type-picker"><label for="problem" class="field-title">REQUEST TYPE</label><select id="problem"><option value="Noise - Residential">Residential noise</option><option value="Noise - Street/Sidewalk">Street noise</option><option value="HEAT/HOT WATER">Heat / hot water</option><option value="Rodent">Rodents</option></select></div></div>
+      <div id="scene" class="scene" role="img" aria-label="Illustrated borough skyline with selected request counts">
+        <img id="scene-art" src="scenes/brooklyn.webp" alt="Illustrated Brooklyn Bridge and DUMBO waterfront at twilight">
+        <div class="scene-shade"></div><div id="scene-light" class="scene-light"></div>
+        <div class="scene-top"><div><div class="scene-eyebrow" id="scene-eyebrow">BROOKLYN / FRIDAY</div><h2 id="scene-title">At 10 PM, the city is still talking.</h2><p id="scene-caption">Brooklyn's residential noise requests, by hour filed.</p></div><div id="clock" class="clock">10:00 <span>PM</span></div></div>
+        <div class="scene-bottom"><div class="live-reading"><strong id="hour-count">67</strong><span id="reading-note">Friday · Brooklyn · 10–11 PM</span></div></div>
+      </div>
+      <div class="controls"><div class="weekday-control"><span class="field-title">PICK A DAY</span><div id="days" class="day-list" role="group" aria-label="Choose a weekday"></div></div><div class="hour-control"><div class="hour-heading"><label for="hour" class="field-title">MOVE THROUGH THE DAY</label><strong id="hour-display">10 PM – 11 PM</strong></div><div class="hour-slider"><input type="range" id="hour" min="0" max="23" step="1" value="22" aria-label="Hour the request was filed"><div class="hour-ticks" aria-hidden="true"></div></div><div class="range-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>11 PM</span></div></div></div>
+      <div class="below"><div class="hour-panel"><p id="hour-chart-caption" class="plot-caption">Residential noise by hour · Brooklyn · Friday</p><div id="hour-bars" class="hour-bars" role="group" aria-label="Hourly requests"></div><div class="hour-axis"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>11 PM</span></div></div><div class="week-panel"><p id="week-chart-caption" class="plot-caption">Residential noise totals by weekday · Brooklyn</p><div id="week-bars" class="week-bars" role="group" aria-label="Daily requests"></div></div></div>
+    </section>
+    <footer><p class="credit">Daniel Contreras · Assignment 5 interactive prototype</p></footer>
+  </main>
+</body>
+</html>

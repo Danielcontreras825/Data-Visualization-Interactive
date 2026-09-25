@@ -1,0 +1,191 @@
+:root {
+  --ink: #f3ede5;
+  --muted: #b8c0c7;
+  --blue: #7f93a7;
+  --orange: #c58a55;
+  --edge: #4a5054;
+}
+
+body {
+  background:
+    radial-gradient(circle at 88% -8%, rgba(113, 138, 158, .18), transparent 38%),
+    radial-gradient(circle at 5% 45%, rgba(153, 126, 103, .15), transparent 36%),
+    linear-gradient(145deg, #151719 0%, #1d2023 56%, #24211f 100%);
+}
+
+.topbar {
+  border-bottom-color: #4a5054;
+}
+
+.mark {
+  color: #f3ede5;
+  font-size: .85rem;
+  letter-spacing: .14em;
+}
+
+.edition {
+  color: #b8c0c7;
+}
+
+.explorer {
+  background: #202326;
+  border-color: #4a5054;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
+}
+
+.pickers,
+.controls {
+  background: linear-gradient(135deg, #292d30 0%, #323235 100%);
+}
+
+.field-title,
+.scene-eyebrow {
+  color: #dda568;
+}
+
+.borough-list button,
+.type-picker select,
+.day-list button {
+  background: #303438;
+  border-color: #555d62;
+}
+
+.borough-list button:hover {
+  background: #3a4045;
+}
+
+.borough-list button.active,
+.day-list button.active {
+  background: #c58a55;
+  border-color: #d7a66f;
+  color: #201a16;
+}
+
+.day-list button.active {
+  box-shadow: inset 0 -3px #ffdbbb;
+}
+
+input[type="range"] {
+  accent-color: #c58a55;
+}
+
+.hour-slider {
+  padding-bottom: 13px;
+}
+
+.hour-ticks {
+  top: 31px;
+}
+
+.hour-ticks span {
+  border-left-color: #737d84;
+}
+
+.hour-ticks span.major {
+  border-left-color: #dda568;
+}
+
+.range-labels {
+  margin-top: 5px;
+  color: #d4d9dc;
+}
+
+.below {
+  border-top-color: #4a5054;
+  background: linear-gradient(145deg, #202428 0%, #292624 100%);
+}
+
+.hour-panel {
+  border-right-color: #4a5054;
+}
+
+.plot-caption {
+  margin: 0;
+  padding-left: 0;
+  border-left: 0;
+  color: #ffdbbb;
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.hour-bars button {
+  background: #7f93a7;
+}
+
+.hour-bars button:hover {
+  background: #d2d4d5;
+}
+
+.hour-bars button.active {
+  background: #c58a55;
+  box-shadow: 0 0 18px rgba(197, 138, 85, .36);
+}
+
+.week-row .track {
+  background: #41484d;
+}
+
+.week-row .fill {
+  background: #909aa3;
+}
+
+.week-row.active .fill {
+  background: #c58a55;
+}
+
+footer {
+  color: #aeb8c0;
+}
+
+.opening {
+  display: block;
+  padding: 38px 0 31px;
+}
+
+.opening h1 {
+  margin: 0;
+}
+
+.scene-bottom {
+  justify-content: flex-end;
+}
+
+.hour-slider {
+  position: relative;
+}
+
+.hour-slider input {
+  position: relative;
+  z-index: 2;
+}
+
+.hour-ticks {
+  position: absolute;
+  z-index: 1;
+  left: 7px;
+  right: 7px;
+  top: 29px;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  pointer-events: none;
+}
+
+.hour-ticks span {
+  height: 8px;
+  border-left: 1px solid #737d84;
+  opacity: .62;
+}
+
+.hour-ticks span.major {
+  height: 12px;
+  border-left-color: #dda568;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .opening {
+    padding: 25px 5px;
+  }
+}
