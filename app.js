@@ -13,12 +13,12 @@
     Rodent: "Rodents"
   };
   const pictures = {
-    Brooklyn: ["scenes/brooklyn.webp", "the Brooklyn Bridge and DUMBO waterfront"],
-    Manhattan: ["scenes/manhattan.webp", "Manhattan skyscrapers"],
-    Queens: ["scenes/queens.webp", "a Queens street and elevated train"],
-    Bronx: ["scenes/bronx.webp", "a Bronx street with an elevated train"],
-    "Staten Island": ["scenes/staten-island.webp", "the Staten Island waterfront and ferry"],
-    "All NYC": ["scenes/manhattan.webp", "the New York City skyline"]
+    Brooklyn: ["brooklyn.webp", "the Brooklyn Bridge and DUMBO waterfront"],
+    Manhattan: ["manhattan.webp", "Manhattan skyscrapers"],
+    Queens: ["queens.webp", "a Queens street and elevated train"],
+    Bronx: ["bronx.webp", "a Bronx street with an elevated train"],
+    "Staten Island": ["staten-island.webp", "the Staten Island waterfront and ferry"],
+    "All NYC": ["manhattan.webp", "the New York City skyline"]
   };
   const boroughOrder = ["All NYC", "Brooklyn", "Manhattan", "Queens", "Bronx", "Staten Island"];
   const state = { borough: "Brooklyn", problem: "Noise - Residential", day: 4, hour: 22 };
